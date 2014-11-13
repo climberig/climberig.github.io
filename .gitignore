@@ -6,3 +6,4 @@ common/src/__pycache__/
 *.out
 atlassian-ide-plugin.xml
 *.iml
+_site
