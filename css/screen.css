@@ -22,14 +22,6 @@ body {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-}
-
-h1 {
-    margin-bottom: 1em;
-}
-
 p {
     margin: 1em 0;
 }
@@ -63,7 +55,7 @@ table {
 
 li {
     padding: 0 4px;
-    color: #626262;
+    color: #000000;
     list-style: none;
 }
 
