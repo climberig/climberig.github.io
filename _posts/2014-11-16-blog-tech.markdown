@@ -6,7 +6,7 @@ permalink: blog-tech
 
 <p class="meta">26 November 2014 - Berkeley</p>
 
-* [Namecheap.com][namecheap] to register my domain name. Namecheap (as name suggests) is not expensive and provide the
+* [Namecheap.com][namecheap] to register the domain name. Namecheap (as name suggests) is not expensive and provide the
 basic dns settings that come with domain registration for free
 * [Github][github] for source control and [Github Pages][github_pages] to generate and host the site
 * Static site generator [Jekyll][jekyll]
@@ -14,7 +14,7 @@ basic dns settings that come with domain registration for free
 * [Intellij IDEA][intellij] for working with the source code and its [Markdown Plugin][intellij_md] for writing the
 blog entries
 
-You can find the source code of this blog [here][blog_src]
+You can find the source code of this blog [here][blog_src].
 
 [namecheap]: https://www.namecheap.com
 [github_pages]: https://pages.github.com
