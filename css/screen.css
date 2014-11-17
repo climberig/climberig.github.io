@@ -16,10 +16,14 @@ html, body {
 }
 
 body {
-    background-color:white;
+    background-color: white;
     font: 13.34px helvetica, arial, clean, sans-serif;
     *font-size: small;
     text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
 }
 
 p {
@@ -67,6 +71,10 @@ ul.posts li span {
 
 ul.posts li a {
     font-weight: 200;
+}
+
+.blogs {
+    margin-bottom: 1em;
 }
 
 /*****************************************************************************/
@@ -139,6 +147,14 @@ ul.posts li a {
     border: 0;
 }
 
+#page ul, ol {
+    margin-left: 1.35em;
+}
+
+#page li {
+    list-style: disc;
+}
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -160,6 +176,10 @@ ul.posts li a {
 #post ul,
 #post ol {
     margin-left: 1.35em;
+}
+
+#post li {
+    list-style: disc;
 }
 
 #post code {

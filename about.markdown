@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: about
 permalink: /about/
 ---
@@ -15,19 +15,20 @@ target="_bank">Project Euler</a>, <a href="http://en.wikipedia.org/wiki/Lead_cli
 and bouldering at <a href="http://www.touchstoneclimbing.com/ironworks" target="_bank">Berkeley Ironworks</a>,
  playing and watching tennis, running, swimming, playing chess and reading.
 
-Things I am proud of:<br/>
- - Winning multiple chess tournaments<br/>
- - Being on my high school chess, soccer, basketball and volleyball teams<br/>
- - Winning math competitions<br/>
- - Finishing high school with the highest honors<br/>
- - Entering Belarussian State University, the best university in Belarus<br/>
- - Winning armwrestling and benchpressing competitions<br/>
- - Solving numerous puzzles (<a href="https://github.com/igorekbsu/ProjectEuler" target="_bank">source</a>) at <a
- href="http://projecteuler.net" target="_bank">Project Euler</a><br/>
- - Graduating with master degree in math while taking additional computer science classes and working part time as a
- software engineer<br/>
- - Sending 5.13b and onsighting multiple 512a-c<br/>
- - Sending a v8<br/>
+Things I am proud of:
+
+* Winning multiple chess tournaments<br/>
+* Being on my high school chess, soccer, basketball and volleyball teams<br/>
+* Winning math competitions<br/>
+* Finishing high school with the highest honors<br/>
+* Entering Belarussian State University, the best university in Belarus<br/>
+* Winning armwrestling and benchpressing competitions<br/>
+* Solving numerous puzzles (<a href="https://github.com/igorekbsu/ProjectEuler" target="_bank">source</a>) at <a
+href="http://projecteuler.net" target="_bank">Project Euler</a><br/>
+* Graduating with master degree in math while taking additional computer science classes and working part time as a
+software engineer<br/>
+* Sending 5.13b and onsighting multiple 512a-c<br/>
+* Sending a v8<br/>
 ![euler profile][euler_progress]
 
 

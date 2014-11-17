@@ -1,0 +1,26 @@
+---
+layout: post
+title: Technologies I Used To Create This Blog
+permalink: blog-tech
+---
+
+<p class="meta">26 November 2014 - Berkeley</p>
+
+* [Namecheap.com][namecheap] to register my domain name. Namecheap (as name suggests) is not expensive and provide the
+basic dns settings that come with domain registration for free
+* [Github][github] for source control and [Github Pages][github_pages] to generate and host the site
+* Static site generator [Jekyll][jekyll]
+* Text-to-HTML conversion tool [Markdown][md]
+* [Intellij IDEA][intellij] for working with source code and its [Markdown Plugin][intellij_md] to write the actual blog entries
+
+You can find the source code of this blog [here][blog_src]
+
+[namecheap]: https://www.namecheap.com
+[github_pages]: https://pages.github.com
+[github]: http://github.com
+[jekyll]: http://jekyllrb.com
+[md]: http://daringfireball.net
+[intellij]: https://www.jetbrains.com/idea
+[intellij_md]: https://plugins.jetbrains.com/plugin/5970?pr=phpStorm
+[blog_src]: https://github.com/igorekbsu/igorekbsu.github.io
+
