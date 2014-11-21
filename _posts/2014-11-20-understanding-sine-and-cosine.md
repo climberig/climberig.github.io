@@ -46,19 +46,18 @@ $$
 
 Can you prove that $cotx=\frac{cosx}{sinx}$?
 
-Everyone have seen this formula before
+Everyone has seen this formula before
 
 $$
 sin^2x + cos^2x=1
 $$
 
-It is called [Pythagorean trigonometric identity][pythagorean_trig]. Usually, it is not well explained
-where this formula comes from. They usually make us remember it in high school.
-Let's see if we can prove it using the definitions above and the [Pythagorean Theorem][pythagorean] which states that $a^2 + b^2=c^2$
+It is called [Pythagorean trigonometric identity][pythagorean_trig]. Where this formula comes from is not usually
+well explained. They make us remember it in high school. Let's see if we can prove it using the definitions
+above and the [Pythagorean Theorem][pythagorean] which states that $a^2 + b^2=c^2$
 
 $$
 sin^2x + cos^2x=(\frac ac)^2 + (\frac bc)^2=\frac{a^2}{c^2} + \frac{b^2}{c^2}=\frac{a^2 + b^2}{c^2}
-
 $$
 
 Applying the pythagorean equation $a^2 + b^2=c^2$ to the numerator, we get
