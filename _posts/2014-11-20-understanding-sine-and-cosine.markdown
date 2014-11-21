@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Understanding Sine And Cosine
-permalink: understanding-sine-and-cosine
+permalink: understanding-sine-cosine
 ---
 
 <p class="meta">20 November 2014 - Berkeley</p>
