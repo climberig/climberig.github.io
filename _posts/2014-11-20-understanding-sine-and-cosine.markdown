@@ -10,7 +10,7 @@ Do you want to understand what $sinx$ and $cosx$ are once and for all? Do you wa
 $sin^2x + cos^2x=1$ and know exactly how to prove it? If the answer is yes, continue reading.
 
 So, what is $sinx$?
-Let's say we have a right angle triangle with the sides `a`, `b`, `c` and the angle `x` between `c` and `b`.
+Let's say we have a right triangle with the sides `a`, `b`, `c` and the angle `x` between `c` and `b`.
 
 ![Triangle][tr]
 
@@ -18,8 +18,9 @@ Then, by definition
 
 $$ sinx = \frac ac $$
 
-That's it! You take an angle in the **right angle** triangle, divide the opposite side by the longest side (the hypotenuse),
-and you get the sine of this angle.
+That's it! You take an angle in the [right triangle][right_triangle], divide the opposite side by the longest side (the hypotenuse),
+and you get the `sine` of this angle. Note that $sinx$ does not depend on the size of a right triangle,
+as long as it contains the same angle $x$, since all such triangles are [similar][similar_triangle].
 
 Cosine, tangent and cotangent are defined similarly:
 
@@ -29,9 +30,7 @@ tanx=\frac ab\\
 cotx=\frac ba
 $$
 
-These are just the **short way** to refer to the ratios of the sides of right angle triangle. There is no magic. Note, however,
-that these functions are only defined in the **right angle** triangle. They are undefined and won't work in
-other triangles.
+These are just the **short way** to refer to the ratios of the sides of the right triangle. There is no magic.
 
 Now, why is $tanx={sinx \over cosx}$?
 
@@ -70,8 +69,11 @@ $$
 
 And it proves that $sin^2x + cos^2x=1$.
 
-[tr]: /images/right_angle_triangle.png  "Triangle"
+[tr]: /images/right_triangle.png  "Triangle"
 [pythagorean]: http://en.wikipedia.org/wiki/Pythagorean_theorem
 [pythagorean_trig]: http://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity
+[pythagorean_trig]: http://en.wikipedia.org/wiki/Pythagorean_trigonometric_identity
+[similar_triangle]: http://www.mathsisfun.com/geometry/triangles-similar.html
+[right_triangle]: http://en.wikipedia.org/wiki/Right_triangle
 
 
