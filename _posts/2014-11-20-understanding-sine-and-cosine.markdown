@@ -14,12 +14,12 @@ Let's say we have a right angle triangle with the sides `a`, `b`, `c` and the an
 
 ![Triangle][tr]
 
-Then, by definition,
+Then, by definition
 
 $$ sinx = \frac ac $$
 
-That's it! There is nothing more to it. It's true for any **right angle** triangle. You take an angle, divide the opposite
-side by the longest side (the hypotenuse), and you get the sine of this angle.
+That's it! You take an angle in the **right angle** triangle, divide the opposite side by the longest side (the hypotenuse),
+and you get the sine of this angle.
 
 Cosine, tangent and cotangent are defined similarly:
 
@@ -29,46 +29,46 @@ tanx=\frac ab\\
 cotx=\frac ba
 $$
 
-These are just a short way to refer to the ratios of the sides of right angle triangle. There is no magic.
+These are just the **short way** to refer to the ratios of the sides of right angle triangle. There is no magic. Note, however,
+that these functions are only defined in the **right angle** triangle. They are undefined and won't work in
+other triangles.
 
 Now, why is $tanx={sinx \over cosx}$?
 
 $$
-\frac{sinx}{cosx}=\frac{a/c}{b/c}= \frac ac * \frac cb=\frac ab=tanx
+\frac{sinx}{cosx}=\frac{\frac ac}{\frac bc}= \frac ac * \frac cb=\frac ab=tanx
 $$
 
 Why is $tanx=\frac{1}{cotx}$?
 
 $$
-\frac{1}{cotx}=\frac{1}{b/a}=1 * \frac ab=\frac ab = tanx
+\frac{1}{cotx}=\frac{1}{\frac ba}=1 * \frac ab=\frac ab = tanx
 $$
 
 Can you prove that $cotx=\frac{cosx}{sinx}$?
 
-Everyone have seen the following formula before
+Everyone have seen this formula before
 
 $$
 sin^2x + cos^2x=1
 $$
 
 It is called [Pythagorean trigonometric identity][pythagorean_trig]. Usually, it is not well explained
-where this formula comes from or why it is true. They usually make us remember it in high school.
-Let's see if we can prove it using the definitions above.
+where this formula comes from. They usually make us remember it in high school.
+Let's see if we can prove it using the definitions above and the [Pythagorean Theorem][pythagorean] which states that $a^2 + b^2=c^2$
 
 $$
 sin^2x + cos^2x=(\frac ac)^2 + (\frac bc)^2=\frac{a^2}{c^2} + \frac{b^2}{c^2}=\frac{a^2 + b^2}{c^2}
 
 $$
 
-[Pythagorean Theorem][pythagorean] states that $a^2 + b^2=c^2$. Let's apply it to the expression above:
+Applying the pythagorean equation $a^2 + b^2=c^2$ to the numerator, we get
 
 $$
 \frac{a^2 + b^2}{c^2}=\frac{c^2}{c^2}=1
 $$
 
 And it proves that $sin^2x + cos^2x=1$.
-
-Hopefully, now you have a better understanding of basic trigonometric functions and formulas.
 
 [tr]: /images/right_angle_triangle.png  "Triangle"
 [pythagorean]: http://en.wikipedia.org/wiki/Pythagorean_theorem
