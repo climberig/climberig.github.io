@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Understanding Sine And Cosine
 permalink: understanding-sine-cosine
 ---

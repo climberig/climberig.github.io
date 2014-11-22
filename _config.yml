@@ -1,4 +1,17 @@
 # Site settings
-title: My site
-url: "http://climberig.com" # the base hostname & protocol for your site
+url: "http://climberig.com"
 highlighter: pygments
+
+defaults:
+ -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+ -
+    scope:
+       path: ""
+       type: "drafts"
+    values:
+       layout: "post"

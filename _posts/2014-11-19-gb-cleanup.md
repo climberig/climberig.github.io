@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  Delete Git Branches In One Command
 permalink: git-branch-delete-all
 ---
