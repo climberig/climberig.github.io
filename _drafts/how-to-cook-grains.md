@@ -5,14 +5,17 @@ permalink: cooking-grains
 
 <p class="meta">22 November 2014 - Berkeley</p>
 
-I like all types of grains, my favourite are buckwheat, brown rice and quinoa. The cooking instructions for them
-are similar but different and it took me quite a few tries to find the best way to cook them.
+I like all types of grains, my favorites are buckwheat, brown rice and quinoa. The cooking instructions for them
+are similar but different and it took me quite a few tries to find the best way to cook them. To save you some time and
+frustration, here are the steps.
 
 **Buckwheat**:
 
-* Put water in a pot covered with a lid. Set the heat to high and wait for water to boil
-* Add buckwheat, use the ratio of 2 cups of water to 1 cup of buckwheat, keep the lid off
-* Wait for water/buckwheat to boil, set the heat to low/simmer, cover the pot with the lid and let it simmer for 12 minutes
+* Put water in a pot and cover with a lid. Use the ratio of 2 cups of water to 1 cup of buckwheat. Set the heat to high
+and wait for the water to boil
+* Once boiled, add buckwheat, keep the lid off
+* Wait for the water/buckwheat to come back to a boil, set the heat to low/simmer, cover the pot with the lid and let
+it simmer for 12 minutes
 * Turn off the heat and let the buckwheat sit for 5-10 minutes
 
 **Brown rice**:
@@ -30,7 +33,7 @@ are similar but different and it took me quite a few tries to find the best way 
 * Turn off the heat and let the quinoa sit for 5 minutes
 
 After they are done, I usually scoop some into a bowl, add butter, salt and seeds. I usually use flax, chia and
-sesame seeds. Sometimes I mix the seeds together, sometimes I only use one type, flax seeds are my favourite.
+sesame seeds. Sometimes I mix the seeds together, sometimes I only use one type, flax seeds are my favourites.
 Experiment and see what you like better.
 
 I get brown rice and quinoa at Costco, buckwheat at Whole Foods.
