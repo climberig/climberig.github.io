@@ -2,7 +2,7 @@
 title:  Delete Git Branches In One Command
 permalink: git-branch-delete-all
 ---
-<p class="meta">19 November 2014 - Berkeley</p>
+<p class="meta">19 November 2014 - Berkeley, California</p>
 
 If you use git as your source control, your workflow is probably similar to the following:
 

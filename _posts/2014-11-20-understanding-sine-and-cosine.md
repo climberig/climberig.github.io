@@ -3,7 +3,7 @@ title: Understanding Sine And Cosine
 permalink: understanding-sine-cosine
 ---
 
-<p class="meta">20 November 2014 - Berkeley</p>
+<p class="meta">20 November 2014 - Berkeley, California</p>
 
 Do you want to understand what $sinx$ and $cosx$ are once and for all? Do you want to look at the formula
 $sin^2x + cos^2x=1$ and know exactly how to prove it? If the answer is yes, continue reading.

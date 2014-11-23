@@ -3,7 +3,7 @@ title: How To Cook Buckwheat, Brown Rice and Quinoa
 permalink: cooking-grains
 ---
 
-<p class="meta">22 November 2014 - Berkeley</p>
+<p class="meta">22 November 2014 - Berkeley, California</p>
 
 I like all types of grains, my favorites are buckwheat, brown rice and quinoa. The cooking instructions for them
 are similar but different and it took me quite a few tries to find the best way to cook them. To save you some time and
