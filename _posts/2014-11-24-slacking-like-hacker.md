@@ -2,7 +2,7 @@
 title:  Slacking Like a Hacker
 permalink: slacking-hacker
 ---
-<p class="meta">22 November 2014 - Berkeley, California</p>
+<p class="meta">24 November 2014 - Berkeley, California</p>
 
 All programmers slack off. While some programmers can get [in the zone](http://www.urbandictionary.com/define.php?term=in+the+zone)
 consistently with no distractions at all, others constantly feel an urge to check their email every five minutes,
