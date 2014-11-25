@@ -20,16 +20,16 @@ love to talk about their code.
 * Run test coverage on the code you are modifying and improve it.
 * Review the code of your team mates and leave some meaningful feedback.
 * Review the code of someone who is not on your team. The code might not be in the language you are used to. Try to
-understand it anyway and leave the feedback.
+understand it anyway and leave feedback.
 * Checkout your github feed. Subscribe to some popular projects there, follow some good developers, review their commits.
 * Open command line, type `man command_name` and read the output. These will take you off to a good start: man find, man sed, man grep,
 man awk, man man, man readline.
 * Do 10 pushups.
 * Take a walk.
 
-This is just some ideas, use them to create your own list, print it out, put it on your desk and use it next time you feel
+These are just some ideas, use them to create your own list, print it out, put it on your desk and use it next time you feel
 the urge. Go through the list in order and pick something that is exciting to you at the moment. If nothing from the list
-interest you, then satisfy the urge.
+interests you, then satisfy the urge.
 
 This simple exercise will make you more productive, happier and you'll learn a lot. It will make you a better programmer
 and, hopefully, a better person.
