@@ -112,6 +112,14 @@ ul.posts li a {
     margin-left: 1em;
 }
 
+.site .title a.extra-right {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 1em;
+    float: right;
+}
+
+
 .site .title a.extra:hover {
     color: black;
 }

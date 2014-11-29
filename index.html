@@ -4,11 +4,11 @@ title: Igor Kuplevich
 ---
 
 <div id="home">
-  <h3 class="blogs">Blog Posts</h3>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>&raquo; <a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.date | date_to_string }}</span></li>
-    {% endfor %}
-  </ul>
+    <h3 class="blogs">Blog Posts</h3>
+    <ul class="posts">
+        {% for post in site.categories.en %}
+        <li>&raquo; <a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.date | date_to_string }}</span></li>
+        {% endfor %}
+    </ul>
 
 </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+{% include header.html %}
+{% include ga.html %}
+<body>
+
+<div class="site">
+    <div class="title">
+        <a class="extra" href="/ru">главная</a>
+        <a class="extra" href="/ru/about">обо мне</a>
+        <a class="extra-right" href="/">en</a>
+    </div>
+
+    {{ content }}
+    {% include comments_ru.html %}
+
+    <div class="footer">
+        <div class="contact">
+            <p>
+               Игорь Куплевич
+            </p>
+        </div>
+        <div class="contact">
+            <p>
+                <a href="http://github.com/igorekbsu" target="_blank">github.com/igorekbsu</a><br/>
+                <a href="http://linkedin.com/in/ihark" target="_blank">linkedin.com/in/ihark</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 ---
 title: Understanding Sine And Cosine
+layout: post
 permalink: understanding-sine-cosine
 ---
 

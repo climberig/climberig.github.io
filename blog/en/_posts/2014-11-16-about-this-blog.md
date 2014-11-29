@@ -1,5 +1,6 @@
 ---
 title:  About This Blog
+layout: post
 permalink: about-this-blog
 ---
 

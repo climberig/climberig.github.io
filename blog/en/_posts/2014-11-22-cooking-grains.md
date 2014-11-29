@@ -1,5 +1,6 @@
 ---
 title: How To Cook Buckwheat, Brown Rice and Quinoa
+layout: post
 permalink: cooking-grains
 ---
 

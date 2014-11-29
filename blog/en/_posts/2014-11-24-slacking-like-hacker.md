@@ -1,5 +1,6 @@
 ---
 title:  Slacking Like a Hacker
+layout: post
 permalink: slacking-hacker
 ---
 <p class="meta">24 November 2014 - Berkeley, California</p>
