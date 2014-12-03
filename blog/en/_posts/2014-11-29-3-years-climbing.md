@@ -43,14 +43,14 @@ Come back the next day and do it again.
 * **Working on the weaknesses**
 
 Everyone has weaknesses. It can be anything: weak open hand or crimping grip, overhang or stemming routes, small crimpy
-holds or slopers, being inflexible, not comfortable with big moves, scared of climbing over your last clip, not comfortable
+holds or slopers, being inflexible, not comfortable with big moves, scared of climbing over the last clip, not comfortable
 on certain walls. Make sure you know your weaknesses and find the ways to work on them. Is it your endurance? Climb the routes
 multiple times in a row with very little rest in between. Is it your power? Boulder the overhanging routes.
 
 * **Building a community**
 
 Talk to other climbers in the gym about training, ways to improve, ask what keeps them motivated, discuss the routes you are
-working on. Help new combers. Be nice and friendly. Find people who are better than you and try to learn from them.
+working on. Help new comers. Be nice and friendly. Find people who are better than you and try to learn from them.
 
 * **Having fun**
 
