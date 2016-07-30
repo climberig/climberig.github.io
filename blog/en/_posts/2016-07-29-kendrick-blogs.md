@@ -1,11 +1,37 @@
 ---
-title:  Dr. Kendrick Blogs
+title:  Dr. Kendrick Blog Posts
 layout: post
-permalink: kendrick-blogs
+permalink: kendrick-posts
 ---
+
+ <style type="text/css">
+        body {
+            background-color: white;
+            font: 13.34px helvetica, arial, clean, sans-serif;
+            text-align: center;
+        }
+
+        .post-container {
+            font-size: 110%;
+            line-height: 1.5em;
+            margin: 3em auto 2em;
+            text-align: justify;
+        }
+
+        li {
+            color: #000000;
+            list-style: outside none none;
+            padding: 0 4px;
+        }
+
+        ul.posts li span {
+            color: #505050;
+            margin-right: 20px;
+            font-family: monofur, monaco, courier;
+        }
 <p class="meta">29 July 2016 - Berkeley, California</p>
 
-<div class="site">
+<div class="post-container">
     <ul class="posts">
         <li><span>2016/07/12</span><a
                 href="https://drmalcolmkendrick.org/2016/07/12/what-causes-heart-disease-past-xviii/" target="_blank">What
