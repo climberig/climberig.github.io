@@ -4,6 +4,9 @@ layout: post
 permalink: kendrick-posts
 ---
 
+<p class="meta">29 July 2016 - Berkeley, California</p>
+
+
  <style type="text/css">
         body {
             background-color: white;
@@ -29,7 +32,7 @@ permalink: kendrick-posts
             margin-right: 20px;
             font-family: monofur, monaco, courier;
         }
-<p class="meta">29 July 2016 - Berkeley, California</p>
+    </style>    
 
 <div class="post-container">
     <ul class="posts">
