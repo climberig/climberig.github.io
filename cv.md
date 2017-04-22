@@ -1,12 +1,17 @@
 ---
 layout: page
-title: Resume
+title: Cv
 permalink: /cv/
 ---
 ![Igor Kuplevich][me]
 
-My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at <a href="http://fitbit
-.com">Fitbit</a>.
+My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at <a href="http://fitbit.com">Fitbit</a>.
+I like solving problems and mastering skills. I enjoy hard work and thrive when faced with difficulties.<br/>
+As an engineer, I have created many projects used by millions of people every day. I've done some interesting things outside of
+software as well. Read about my most memorable software projects below. Read about my non-software knowledge quests here 
+<a href="/knowledge-quests" target="_blank">http://climberig.com/knowledge-quests</a>
+
+If you are an engineer or a technical person, please, read this <a href="/4engineers" target="_blank">http://climberig.com/4engineers</a>
 
 **Work**
 
@@ -27,7 +32,7 @@ I worked with our research team to develop an algorithm that delivers sleep insi
 relevant, intelligent and help users to sleep better. Besides the algorithm, I also:<br/>
 -- designed and implemented the entire thing. It took me more than a year during which I wrote code every day<br/>
 -- implemented a testing framework to emulate a user. Such tests are easy to write and they are fast. The framework of 200 lines of code gave 
-80% coverage to an app of 20k lines of code. These tests allow me to release to production without manual testing<br/>
+80% coverage to 20k lines of code. These tests allow me to release to production without manual testing<br/>
 -- invented my own java code style to keep my code short, consistent but fun to work with and readable (very hard balance to achieve)<br/>
 -- implemented an i18n mechanism to deliver content in multiple language<br/>
 I used **java 8** and **javascript** for the app code, **python** to automate certain maintenance tasks, **cassandra** to store data,
