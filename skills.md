@@ -1,7 +1,7 @@
 ---
 layout: page
-title: knowledge-quests
-permalink: /knowledge-quests/
+title: skills
+permalink: /skills/
 ---
 
 **My Quests for Knowledge and Skills**
@@ -29,6 +29,17 @@ I kept going. Every day, same routine.<br/>
 into my dream university without any tests (I won their math competition). I could select any faculty/specialty I wanted (I chose math). 9 months 1 day later, I went to
 play soccer with my friends.
 
+* **English, 2005**
+
+Summer 2005. I passed my university finals early because I was about to go to USA. For the first time. I was going to work in a restaurant as an international exchange student. My goal was very simple. 
+I wanted to make enough money to buy a laptop. Wouldn't it be cool if I could just write code anywhere? Even in my grandmother's village! I worked 14 hours every day that summer, bought the best
+laptop on the market and came back home very happy (and very tired). I had a problem though. I could barely speak and understand english. I really wanted to come back next summer to see all my new friends 
+but I would like to have a meaningful conversation with them. The plan was simple. I would watch my favourite movies in english with english subtitles. I would lookup the words in the dictionary and
+learn them. Then I'd watch it again and again until I could completely understand it. It was very motivating. Every time I watched it, I could understand a lot more. What sounded like gibberish yesterday
+was perfectly clear today. I could not stop. I came back the next summer in the same restaurant. I could communicate with my friends, no problem. I was even able to help my boss communicate with other 
+international students. I made more friends, had more fun, made even more money and bought a better laptop (gave the old one to my younger brother).
+
+
 * **Rock Climbing, 2012**
 
 Growing up, I had climbed all the trees in my grandmother's village and I could easily do 20 pullups, so when my friend took me rock climbing I thought I'd climb the rocks with no problem. I was wrong. 
@@ -39,5 +50,6 @@ I still climb almost every day.<br/>
 
 * **Other**
 
-I have used similar approaches and techniques to gain other skills including: english, tennis, running.
+I have used similar approaches and techniques to gain many other skills including playing button accordion, tennis, soccer, ping pong, volleyball, solving rubik's cube (consistently under 1.5 minutes)
+and swimming.
 

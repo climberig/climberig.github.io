@@ -5,13 +5,11 @@ permalink: /cv/
 ---
 ![Igor Kuplevich][me]
 
-My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at <a href="http://fitbit.com">Fitbit</a>.
-I like solving problems and mastering skills. I enjoy hard work and thrive when faced with difficulties.<br/>
-As an engineer, I have created many projects used by millions of people every day. I've done some interesting things outside of
-software as well. Read about some of my software projects below. Read about my non-software knowledge quests here 
-<a href="/knowledge-quests" target="_blank">http://climberig.com/knowledge-quests</a>
+My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at <a href="http://fitbit.com">Fitbit</a>. I like solving problems and mastering skills 
+<a href="/skills" target="_blank">http://climberig.com/skills</a>. I enjoy hard work and thrive when faced with difficulties.<br/>
+As an engineer, I have created many projects used by millions of people every day. I've done some cool things outside of work too <a href="/outside-work" target="_blank">http://climberig.com/outside-work</a>.
 
-If you are an engineer or a technical person, please, read this <a href="/4engineers" target="_blank">http://climberig.com/4engineers</a>
+After more than a decade in the software industry, I have a couple things to say about software, engineers, interviews, motivation <a href="/misc-eng" target="_blank">http://climberig.com/misc-eng</a>.
 
 **Work**
 

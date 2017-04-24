@@ -1,7 +1,7 @@
 ---
 layout: page
-title: For Engineers
-permalink: /4engineers
+title: Misc Eng
+permalink: /misc-eng
 ---
 
 **What's the hardest problem in software?**
