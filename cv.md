@@ -7,7 +7,7 @@ permalink: /cv/
 <center><image src="/images/me.jpg" alt="Igor Kuplevich" title="Igor Kuplevich"/></center>
 
 My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at Fitbit. I like solving problems and mastering skills 
-<a href="/skills" target="_blank">http://climberig.com/skills</a>. I enjoy hard work and thrive when faced with difficulties.
+<a href="/skills" target="_blank">http://climberig.com/skills</a> (it's a good read). I enjoy hard work and thrive when faced with difficulties.
 
 As an engineer, I have created many projects used by millions of people every day. I've done some cool things outside of work too 
 <a href="/off-work" target="_blank">http://climberig.com/off-work</a>.
