@@ -9,21 +9,27 @@ permalink: /cv/
 My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at Fitbit. I like solving problems and mastering skills 
 <a href="/skills" target="_blank">http://climberig.com/skills</a>. I enjoy hard work and thrive when faced with difficulties.
 
-As an engineer, I have created many projects used by millions of people every day. I've done some cool things outside of work too <a href="/outside-work" target="_blank">http://climberig.com/outside-work</a>.
+As an engineer, I have created many projects used by millions of people every day. I've done some cool things outside of work too 
+<a href="/off-work" target="_blank">http://climberig.com/off-work</a>.
 
-After more than a decade in the software industry, I have a couple things to say about software, engineers, interviews, motivation, etc <a href="/misc-eng" target="_blank">http://climberig.com/misc-eng</a>.
+After more than a decade in the software industry, I have a couple things to say about software, engineers, interviews, motivation, etc 
+<a href="/misc-eng" target="_blank">http://climberig.com/misc-eng</a>.
 
 **Work**
 
-* Fitbit, June 2012 - current, Software Engineer
-* University of California Berkeley, May 2009 - June 2012, Software Engineer                                                            
-* Other software companies since 2005
+* Fitbit, June 2012 - current, Software Engineer (40th employee)
+Released many projects, came up with a few good ideas, shared them via internal blog. 
+
+* University of California Berkeley, May 2009 - June 2012, Software Engineer<br/>
+Implemented projects for students and staff.                                                            
+
+* Other software companies since 2005<br/>
+Started my career in Belarus and moved to USA in 2008 after graduating from the university.
 
 **Education**
 
 I graduated from Belarussian State University (best university in Belarus) in 2008 with Masters in Mathematics. Additionally, I took
 computer science classes and have worked as a software engineer since I was 19 years old.
-
 
 **Memorable Software Projects**
 
@@ -36,7 +42,7 @@ relevant, intelligent and help users to sleep better. Besides the algorithm, I a
 -- invented my own java coding style to keep my code short, consistent but fun to work with and readable (very hard balance to achieve)<br/>
 -- implemented an i18n mechanism to deliver content in multiple languages<br/>
 I used **java 8** and **javascript** for the app code, **python** to automate certain maintenance tasks, **cassandra** to store data,
-**jenkins** to run tests and deploy; **gradle** to build the app, **kibana** for logs, **graphana** to build performance dashboards, **Intellij**
+**jenkins** to run tests and deploy; **gradle** to build the app, **kibana** for logs, **graphana** for performance dashboards, **Intellij**
 to write code, **Ubuntu 16.04** to manage all of the above.
 
 * **Smart Sleep, Fitbit**<br/>
@@ -46,7 +52,7 @@ It is now used on all Fitbits. The core algorithm has not changed much and I've 
 fact.
 
 * **My Financial Aid, UC Berkeley**<br/>
-Financial Aid Website used by all berkeley students
+Financial Aid Website used by all berkeley students and staff members of financial aid department. I wrote it from scratch using google web toolkit.
 
 * **Oh Hell**<br/>
 <a href="https://en.wikipedia.org/wiki/Oh_Hell" target="_blank">Oh Hell</a> is a card game which I play with my family every Thanksgiving. I first learned how to play in 2015. I thought it was very hard
