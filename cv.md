@@ -17,7 +17,7 @@ After more than a decade in the software industry, I have a couple things to say
 
 **Work**
 
-* Fitbit, June 2012 - current, Software Engineer (40th employee)
+* Fitbit, June 2012 - current, Software Engineer (40th employee)<br/>
 Released many projects, came up with a few good ideas, shared them via internal blog. 
 
 * University of California Berkeley, May 2009 - June 2012, Software Engineer<br/>

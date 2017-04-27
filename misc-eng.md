@@ -25,8 +25,7 @@ I wish the interviews were a bit more bilateral and collaborative like asking a 
 (OS, IDE, editor). Does he know how to use his tools? Is he passionate about his code? How does he work with it? Can he run his tests? 
 Maybe he can teach me something. Maybe he can also look at my code and tell me something I can improve, maybe some useful refactoring. 
 Maybe there is a bug in my code? How would he fix it? What is his favourite command line command? What is his favourite bug? How did he 
-fix it? I also think the interviewee should interview his interviewers. Maybe when I look at your code, I would not want to work for you.
-We'll save each other a lot of time.
+fix it? Maybe when he looks at your code, he would not want to work for you.
 
 **How do you define a great programmer?**
 
@@ -72,6 +71,7 @@ to unmout and disconnect the usb or external hard-drive.
 -- linux and command line
 
 **I dislike**
+
 -- inconsistent code style<br/>
 -- unused code<br/>
 -- verbose names<br/>
