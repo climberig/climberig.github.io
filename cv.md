@@ -24,7 +24,7 @@ Released many projects, came up with a few good ideas, shared them via internal 
 Implemented projects for students and staff.                                                            
 
 * Other software companies since 2005<br/>
-Started my career in Belarus and moved to USA in 2008 after graduating from the university.
+Started my career in Belarus and moved to USA in 2008 upon graduation.
 
 **Education**
 
