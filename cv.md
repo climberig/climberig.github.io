@@ -15,6 +15,13 @@ As an engineer, I have created many projects used by millions of people every da
 After more than a decade in the software industry, I have a couple things to say about software, engineers, interviews, motivation, etc 
 <a href="/misc-eng" target="_blank">http://climberig.com/misc-eng</a>.
 
+**Skills**
+
+Java, Python, Javascript, Ruby, Bash. If I can solve a problem using a pencil and paper, it is ideal (no need to maintain code). I try to use
+the best tools for the job. If it means learning a new language, framework, paradigm, etc., so be it.
+
+If you are interested in my non-programming skills, read this <a href="/skills" target="_blank">http://climberig.com/skills</a>.
+
 **Work**
 
 * Fitbit, June 2012 - current, Software Engineer (40th employee)<br/>
