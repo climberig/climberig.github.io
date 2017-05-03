@@ -25,10 +25,11 @@ If you are interested in my non-programming skills, read this <a href="/skills" 
 **Work**
 
 * Fitbit, June 2012 - current, Software Engineer (40th employee)<br/>
-Released many projects, came up with a few good ideas, shared them via internal blog. 
+Implemented critical business projects, lead most of them; worked heavily with research on different algorithms; proposed and implemented many innovative
+ideas and approaches, some of them were adopted by other teams; created an internal company engineering blog, shared some of the ideas using it.
 
 * University of California Berkeley, May 2009 - June 2012, Software Engineer<br/>
-Implemented projects for students and staff.                                                            
+Implemented projects for students and staff; lead most of them working heavily with product managers to find simpler and better ways to do things.                                                            
 
 * Other software companies since 2005<br/>
 Started my career in Belarus and moved to USA in 2008 upon graduation.
