@@ -24,7 +24,7 @@ If you are interested in my non-programming skills, read this <a href="/skills" 
 
 **Work**
 
-* Fitbit, June 2012 - current, Software Engineer (40th employee)<br/>
+* Fitbit, June 2012 - June 2017, Software Engineer<br/>
 Implemented critical business projects, led most of them; worked heavily with research on different algorithms; proposed and implemented many innovative
 ideas and approaches, some of them were adopted by other teams; created an internal company engineering blog, shared some of the ideas using it.
 
