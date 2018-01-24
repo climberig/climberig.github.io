@@ -6,7 +6,7 @@ permalink: /cv/
                 
 <center><image src="/images/me.jpg" alt="Igor Kuplevich" title="Igor Kuplevich"/></center>
 
-My name is Igor Kuplevich. I live in Berkeley (California) and work as a software engineer at Fitbit. I like solving problems and mastering skills 
+My name is Igor Kuplevich. I live in New York City and work as a software engineer at a quantitative hedge fund. I like solving problems and mastering skills 
 <a href="/skills" target="_blank">http://climberig.com/skills</a> (it's a good read). I enjoy hard work and thrive when faced with difficulties.
 
 As an engineer, I have created many projects used by millions of people every day. I've done some cool things outside of work too 
@@ -24,7 +24,9 @@ If you are interested in my non-programming skills, read this <a href="/skills" 
 
 **Work**
 
-* Fitbit, June 2012 - June 2017, Software Engineer<br/>
+* Quantitative Hedge Fund, August 2017, Software Engineer<br/>
+
+* Fitbit, June 2012 - July 2017, Software Engineer<br/>
 Implemented critical business projects, led most of them; worked heavily with research on different algorithms; proposed and implemented many innovative
 ideas and approaches, some of them were adopted by other teams; created an internal company engineering blog, shared some of the ideas using it.
 
