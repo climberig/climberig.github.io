@@ -20,8 +20,6 @@ After more than a decade in the software industry, I have a couple things to say
 Java, Python, Javascript, Ruby, Bash. If I can solve a problem using a pencil and paper, it is ideal (no need to maintain code). I try to use
 the best tools for the job. If it means learning a new language, framework, paradigm, etc., so be it.
 
-If you are interested in my non-programming skills, read this <a href="/skills" target="_blank">http://climberig.com/skills</a>.
-
 **Work**
 
 * Quantitative Hedge Fund, August 2017, Software Engineer<br/>
