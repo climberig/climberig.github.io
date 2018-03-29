@@ -15,6 +15,11 @@ As an engineer, I have created many projects used by millions of people every da
 After more than a decade in the software industry, I have a couple things to say about software, engineers, interviews, motivation, etc 
 <a href="/misc-eng" target="_blank">http://climberig.com/misc-eng</a>.
 
+I sometimes solve programming puzzles and participate in programming contests<br/>
+<a href="https://leetcode.com/climberig" target="_blank">https://leetcode.com/climberig</a><br/>
+<a href="https://www.hackerrank.com/climberig" target="_blank">https://www.hackerrank.com/climberig</a><br/>
+<image src="https://projecteuler.net/profile/climberig.png" alt="Project Euler" title="Project Euler"/>
+
 **Skills**
 
 Java, Python, Javascript, Ruby, Bash. If I can solve a problem using a pencil and paper, it is ideal (no need to maintain code). I try to use
