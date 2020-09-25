@@ -7,27 +7,9 @@ permalink: /about/
 
 ### About me
 
-My name is Igor Kuplevich. I live in New York City and work as a software engineer. I like solving programming puzzles
+My name is Igor Kuplevich. I live in Berkeley, California. After spending over 10 years working as a software engineer,
+I've decided it was time to work for myself and started my own hedge fund.  
 
-![euler profile][euler_progress]
-
-https://leetcode.com/climberig/
-
-https://www.hackerrank.com/climberig
-
-
-
-Things I am proud of:
-
-* Winning multiple chess tournaments<br/>
-* Being on my high school chess, soccer, ping pong, basketball and volleyball teams<br/>
-* Winning math competitions<br/>
-* Finishing high school with the highest honors (gold medal)<br/>
-* Entering Belarussian State University, the best university in Belarus<br/>
-* Winning armwrestling and benchpressing competitions<br/>
-* Graduating with master degree in math while taking additional computer science classes and working part time as a software engineer<br/>
-* Sending 5.13c and onsighting multiple 512c<br/>
-* Sending a v8<br/>
-
-[me]: /images/me.jpg  "Igor Kuplevich"
-[euler_progress]: https://projecteuler.net/profile/climberig.png
+I used to be quite active in competitive programming, especially on leetcode.com. I posted many solutions there, 
+some of them even became popular. I no longer have time to do it. All my time is spent parenting my two boys and working on the trading
+system for my hedge fund.
