@@ -1,0 +1,9 @@
+If making changes to the code:
+
+1. Add a test button to html
+
+<button id="testButton">Test Game</button>
+
+2. Add a test button click listener with custom params
+
+document.getElementById('testButton').addEventListener("click", function () {startGame({players: ['igor', 'katie', 'emery'], dealerIdx: 0, cardLim: 2});});

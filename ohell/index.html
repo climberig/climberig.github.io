@@ -7,89 +7,105 @@
 <script>
     function ohell() {
         let inputParams = {players: [], dealerIdx: 0, cardLim: 0};//entered by user on the init page
-        let gameState = {currCard: 1, roundCount: 1, dealerIdx: 0, scores: []};//mutable
-        let allBidInputs = [], allTrickInputs = [];//keep all players bids and tricks for editing the scores
+        let gameState = {currCard: 1, roundCount: 1, dealerIdx: 0, scores: [], bidInputs: [], trickInputs: []};//mutable
+        let html = {scoreTable: document.getElementById('scoreTable'), editTable: document.getElementById('editTable'), messages: document.getElementById('messages')};
         document.getElementById('startButton').addEventListener("click", function () {
-            let errors = validate();
-            if (errors) alert(errors);
-            else startGame(inputParams);
+            let getInput = elementId => document.getElementById(elementId).value.trim().toLowerCase();
+            let inputs = {players: getInput('players'), dealer: getInput('dealer'), cardLim: getInput('cardLim')};
+            if (!inputs.players || !inputs.dealer || notNumber(inputs.cardLim)) {
+                alert('Enter players, dealer and card limits (a number)');
+                return;
+            }
+            if (inputs.players.indexOf(inputs.dealer) === -1) {
+                alert('Dealer should be one of the players');
+                return;
+            }
+            let players = inputs.players.split(','), dealerIdx = 0;
+            for (let i = 0; i < players.length; i++) {
+                players[i] = players[i].trim();
+                if (players[i] === inputs.dealer)
+                    inputParams.dealerIdx = i;
+            }
+            startGame({players: players, dealerIdx: dealerIdx, cardLim: parseInt(inputs.cardLim)});
         });
-        //document.getElementById('testButton').addEventListener("click", function () {startGame({players: ['igor', 'katie', 'emery'], dealerIdx: 0, cardLim: 2});});
         document.getElementById('editScoresLink').addEventListener("click", function () {
             toggle('editColumn');
         });
 
         function startGame(inputParams) {
             document.getElementById('updateButton').addEventListener("click", function () {
-                document.getElementById('scoreTable').innerHTML = "";
-                addRow('scoreTable', '', inputParams.players);
-                let params = {currCard: 1, roundCount: 1, dealerIdx: inputParams.dealerIdx, scores: new Array(inputParams.players.length).fill(0)};
-                for (let i = 0; i < allBidInputs.length; i++) {
-                    addScores(allBidInputs[i], allTrickInputs[i], params);
-                    nextRound(inputParams, params);
+                html.scoreTable.innerHTML = "";
+                addRow(html.scoreTable, '', inputParams.players);
+                let state = {
+                    currCard: 1, roundCount: 1, dealerIdx: inputParams.dealerIdx,
+                    scores: new Array(inputParams.players.length).fill(0),
+                    bidInputs: gameState.bidInputs, trickInputs: gameState.trickInputs
+                };
+                for (let i = 0; i < state.bidInputs.length; i++) {
+                    addScores(state.bidInputs[i], state.trickInputs[i], state, html.scoreTable);
+                    nextRound(inputParams, state);
                 }
                 toggle('editColumn');
-                run(inputParams, params);
+                run(inputParams, state, html);
             });
             document.getElementById('init').remove();
             toggle('game');
-            addRow('editTable', '', inputParams.players);
-            run(inputParams, gameState);
+            addRow(html.editTable, '', inputParams.players);
+            run(inputParams, gameState, html);
         }
 
-        function run(inputParams, state) {
+        function run(inputParams, state, html) {
             if (state.currCard === 0) {
-                showWinners(inputParams.players, state.scores);
+                showWinners(inputParams.players, state.scores, html.messages);
                 return;
             }
             if (state.currCard === 1 && state.roundCount === 1) {
                 state.scores = new Array(inputParams.players.length).fill(0);
                 state.dealerIdx = inputParams.dealerIdx;
-                addRow('scoreTable', '', inputParams.players);
+                addRow(html.scoreTable, '', inputParams.players);
             }
-            addCurrentPlayers(inputParams, state);
-            let bidInputs = inputs('Bids', inputParams.players.length), trickInputs = [];
+            let currRoundPlayers = [];
+            for (let i = 0; i < inputParams.players.length; i++)
+                currRoundPlayers.push(inputParams.players[(i + state.dealerIdx + 1) % inputParams.players.length])
+            addRow(html.scoreTable, state.currCard, currRoundPlayers);
+            let bidInputs = addInputs('Bids', inputParams.players.length, html.scoreTable), trickInputs = [];
             for (let i = 0; i < bidInputs.length; i++)
                 bidInputs[i].addEventListener("keyup", function () {
-                    if (notNumber(bidInputs[i]))
+                    if (notNumber(bidInputs[i].value))
                         return;
                     if (i < bidInputs.length - 1)
                         bidInputs[i + 1].focus();
                     if (i === bidInputs.length - 2) {
-                        let diff = state.currCard - sumVals(bidInputs);
-                        setMessage(diff >= 0 ? 'can not bid ' + diff : 'can bid everything');
+                        let sum = 0;
+                        for (let i = 0; i < bidInputs.length - 1; i++)
+                            sum += parseInt(bidInputs[i].value)
+                        let diff = state.currCard - sum
+                        html.messages.innerText = diff >= 0 ? 'can not bid ' + diff : 'can bid everything';
                     } else if (i === bidInputs.length - 1) {
-                        setMessage('');
+                        html.messages.innerText = '';
                         if (trickInputs.length > 0) {
                             trickInputs[0].focus();
                             return;
                         }
-                        trickInputs = inputs('Tricks', inputParams.players.length);
+                        trickInputs = addInputs('Tricks', inputParams.players.length, html.scoreTable);
                         for (let i = 0; i < trickInputs.length; i++)
                             trickInputs[i].addEventListener("keyup", function () {
-                                if (notNumber(trickInputs[i]))
+                                if (notNumber(trickInputs[i].value))
                                     return
                                 if (i < trickInputs.length - 1)
                                     trickInputs[i + 1].focus()
                                 else if (i === trickInputs.length - 1) {
-                                    document.getElementById('scoreTable').deleteRow(-1);//tricks inputs row
-                                    document.getElementById('scoreTable').deleteRow(-1);//bids inputs row
-                                    document.getElementById('scoreTable').deleteRow(-1);//current players
-                                    saveForEdit(bidInputs, trickInputs, state);//bids and tricks inputs are cloned and saved to edit scores table *in initial player's order*
-                                    addScores(allBidInputs[allBidInputs.length - 1], allTrickInputs[allBidInputs.length - 1], state);
+                                    html.scoreTable.deleteRow(-1);//tricks addInputs row
+                                    html.scoreTable.deleteRow(-1);//bids addInputs row
+                                    html.scoreTable.deleteRow(-1);//current players
+                                    saveForEdit(bidInputs, trickInputs, state, html.editTable);//bids and tricks addInputs are cloned and saved to edit scores table *in initial player's order*
+                                    addScores(state.bidInputs[state.bidInputs.length - 1], state.trickInputs[state.trickInputs.length - 1], state, html.scoreTable);
                                     nextRound(inputParams, state);
-                                    run(inputParams, state);
+                                    run(inputParams, state, html);
                                 }
                             });
                     }
                 });
-        }
-
-        function addCurrentPlayers(inputParams, params) {
-            let currRoundPlayers = []
-            for (let i = 0; i < inputParams.players.length; i++)
-                currRoundPlayers.push(inputParams.players[(i + params.dealerIdx + 1) % inputParams.players.length])
-            addRow('scoreTable', params.currCard, currRoundPlayers);
         }
 
         function nextRound(inputParams, params) {
@@ -98,97 +114,70 @@
             params.dealerIdx = (params.dealerIdx + 1) % inputParams.players.length;
         }
 
-        function saveForEdit(bidInputs, trickInputs, state) {
-            let newBidInputs = [], newTrickInputs = [];
-            let row = document.getElementById('editTable').insertRow(-1);
+        function saveForEdit(bidInputs, trickInputs, state, htmlTable) {
+            let editBidInputs = [], editTrickInputs = [];
+            let row = htmlTable.insertRow(-1);
             row.insertCell(-1);
             for (let i = 0; i < bidInputs.length; i++) {
                 let idx = (i - state.dealerIdx - 1 + bidInputs.length) % bidInputs.length;
                 let bidInput = newInput(bidInputs[idx].value), trickInput = newInput(trickInputs[idx].value);
-                newBidInputs.push(bidInput);
-                newTrickInputs.push(trickInput);
+                editBidInputs.push(bidInput);
+                editTrickInputs.push(trickInput);
                 let cell = row.insertCell(-1);
                 cell.appendChild(bidInput);
                 cell.appendChild(trickInput);
             }
-            allBidInputs.push(newBidInputs);
-            allTrickInputs.push(newTrickInputs);
+            state.bidInputs.push(editBidInputs);
+            state.trickInputs.push(editTrickInputs);
         }
 
-        function addScores(bidBoxes, trickBoxes, params) {
+        function addScores(bidBoxes, trickBoxes, state, htmlTable) {
             for (let i = 0; i < bidBoxes.length; i++) {
                 let bid = parseInt(bidBoxes[i].value), trick = parseInt(trickBoxes[i].value);
                 let diff = Math.abs(bid - trick);
                 let score = diff === 0 ? 10 + bid * 2 : -2 * diff;
-                params.scores[i] += score;
+                state.scores[i] += score;
             }
-            addRow('scoreTable', params.currCard, params.scores);
+            addRow(htmlTable, state.currCard, state.scores);
         }
 
-        function showWinners(players, scores) {
+        function showWinners(players, scores, htmlElement) {
             let winners = [];
             let maxScore = Math.max(...scores);
             for (let i = 0; i < players.length; i++)
                 if (scores[i] === maxScore)
                     winners.push(players[i]);
-            setMessage(winners.join(',') + ' won');
+            htmlElement.innerText = winners.join(',') + ' won';
         }
 
-        function notNumber(box) {return box.value.trim() === '' || isNaN(box.value);}
+        function notNumber(val) {return val.trim() === '' || isNaN(val);}
 
-        function setMessage(m) {document.getElementById('messages').innerHTML = m;}
-
-        function inputs(label, len) {
+        function addInputs(label, len, htmlTable) {
             let inputs = new Array(len);
             for (let i = 0; i < len; i++)
                 inputs[i] = newInput('');
-            addRow('scoreTable', label, inputs);
+            addRow(htmlTable, label, inputs);
             inputs[0].focus();
             return inputs;
         }
 
         function newInput(val) {
-            let input = document.createElement('input');
-            input.setAttribute("type", "text");
+            let input = document.createElement('input');//default is text box
             input.value = val;
             return input;
         }
 
-        function addRow(table, first, elements) {
-            let row = document.getElementById(table).insertRow(-1);
+        function addRow(htmlTable, first, elements) {
+            let row = htmlTable.insertRow(-1);
             row.insertCell(-1).innerText = first;
             if (elements[0] instanceof HTMLElement)
                 elements.forEach(v => row.insertCell(-1).appendChild(v));
             else elements.forEach(v => row.insertCell(-1).innerText = v);
         }
 
-        function sumVals(inputs) {
-            let sum = 0;
-            for (let i = 0; i < inputs.length - 1; i++)
-                sum += parseInt(inputs[i].value)
-            return sum;
-        }
-
         function toggle(id) {
             let html = document.getElementById(id);
             html.style.display = html.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function validate() {
-            let playersStr = document.getElementById('players').value.trim().toLowerCase();
-            let dealerStr = document.getElementById('dealer').value.trim().toLowerCase();
-            if (!playersStr || !dealerStr)
-                return 'Enter players and dealer';
-            if (playersStr.indexOf(dealerStr) === -1)
-                return 'Dealer should be one of the players';
-            let players = playersStr.split(',');
-            for (let i = 0; i < players.length; i++) {
-                players[i] = players[i].trim();
-                if (players[i] === dealerStr)
-                    inputParams.dealerIdx = i;
-            }
-            inputParams.cardLim = parseInt(document.getElementById('cardLim').value);
-            inputParams.players = players;
         }
     }
 </script>
@@ -226,7 +215,6 @@
         </tr>
     </table>
     <button id="startButton">Start Game</button>
-<!--    <button id="testButton">Test Game</button>-->
     <p>Enter the names of the players as they are located around the table</p>
 </div>
 <div id="game" style="display: none">
