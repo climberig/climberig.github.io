@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ohell Scores</title>
+    <link href='/images/favicon.ico' rel='shortcut icon' type='image/ico'>
+</head>
+<script>
+    function ohell() {
+        let inputParams = {players: [], dealerIdx: 0, cardLim: 0};
+        let runtimeParams = {currCard: 1, roundCount: 1, dealerIdx: 0, scores: []};
+        let allBidBoxes = [], allTrickBoxes = [];
+
+        element('startButton').addEventListener("click", function () {
+            let errors = validate();
+            if (errors) alert(errors);
+            else startGame(inputParams);
+        });
+        element('testButton').addEventListener("click", function () {
+            startGame({players: ['igor', 'katie', 'emery'], dealerIdx: 0, cardLim: 1});
+        });
+        element('toggleEditorLink').addEventListener("click", function () {
+            toggle('editColumn');
+        });
+
+        function startGame(inputParams) {
+            element('updateButton').addEventListener("click", function () {
+                element('scoreTable').innerHTML = "";
+                addRow('scoreTable', '', inputParams.players);
+                let params = {currCard: 1, roundCount: 1, dealerIdx: inputParams.dealerIdx, scores: new Array(inputParams.players.length).fill(0)};
+                for (let i = 0; i < allBidBoxes.length; i++) {
+                    addScores(allBidBoxes[i], allTrickBoxes[i], params);
+                    nextRound(inputParams, params);
+                }
+                play(inputParams, params);
+            });
+            element('init').remove();
+            toggle('game');
+            addRow('editTable', '', inputParams.players);
+            play(inputParams, runtimeParams);
+        }
+
+        function play(inputParams, params) {
+            if (params.currCard === 0) {
+                showWinners(inputParams.players, params.scores);
+                return;
+            }
+            if (params.currCard === 1 && params.roundCount === 1) {
+                params.scores = new Array(inputParams.players.length).fill(0);
+                addRow('scoreTable', '', inputParams.players);
+            }
+            let currRoundPlayers = []
+            for (let i = 0; i < inputParams.players.length; i++)
+                currRoundPlayers.push(inputParams.players[(i + params.dealerIdx + 1) % inputParams.players.length])
+            addRow('scoreTable', params.currCard, currRoundPlayers);
+            let bidInputs = inputs('Bids', inputParams.players.length), trickInputs = [];
+            for (let i = 0; i < bidInputs.length; i++)
+                bidInputs[i].addEventListener("keyup", function () {
+                    if (notNumber(bidInputs[i]))
+                        return
+                    if (i < bidInputs.length - 1)
+                        bidInputs[i + 1].focus();
+                    if (i === bidInputs.length - 2) {
+                        let diff = params.currCard - sumVals(bidInputs);
+                        setMessage(diff >= 0 ? 'can not bid ' + diff : 'can bid everything');
+                    } else if (i === bidInputs.length - 1) {
+                        setMessage('');
+                        if (trickInputs.length > 0) {
+                            trickInputs[0].focus();
+                            return
+                        }
+                        trickInputs = inputs('Tricks', inputParams.players.length);
+                        for (let i = 0; i < trickInputs.length; i++)
+                            trickInputs[i].addEventListener("keyup", function () {
+                                if (notNumber(trickInputs[i]))
+                                    return
+                                if (i < trickInputs.length - 1)
+                                    trickInputs[i + 1].focus()
+                                else if (i === trickInputs.length - 1) {
+                                    element('scoreTable').deleteRow(-1);
+                                    element('scoreTable').deleteRow(-1);
+                                    element('scoreTable').deleteRow(-1);
+                                    processBidTricks(bidInputs, trickInputs, params);
+                                    let j = allBidBoxes.length - 1;
+                                    addScores(allBidBoxes[j], allTrickBoxes[j], params);
+                                    addEditRow(params.currCard, allBidBoxes[j], allTrickBoxes[j]);
+                                    nextRound(inputParams, params);
+                                    play(inputParams, params);
+                                }
+                            });
+                    }
+                });
+        }
+
+        function nextRound(inputParams, params) {
+            params.roundCount += 1;
+            params.currCard += params.roundCount <= inputParams.cardLim ? 1 : -1;
+            params.dealerIdx = (params.dealerIdx + 1) % inputParams.players.length;
+        }
+
+        function processBidTricks(bidInputs, trickInputs, params) {
+            let editBidBoxes = [], editTrickBoxes = [];
+            for (let i = 0; i < bidInputs.length; i++) {
+                let idx = (i - params.dealerIdx - 1 + bidInputs.length) % bidInputs.length;
+                editBidBoxes.push(newInput(bidInputs[idx].value));
+                editTrickBoxes.push(newInput(trickInputs[idx].value));
+            }
+            allBidBoxes.push(editBidBoxes);
+            allTrickBoxes.push(editTrickBoxes);
+        }
+
+        function addScores(bidBoxes, trickBoxes, params) {
+            for (let i = 0; i < bidBoxes.length; i++) {
+                let bid = parseInt(bidBoxes[i].value), trick = parseInt(trickBoxes[i].value);
+                let diff = Math.abs(bid - trick);
+                let score = diff === 0 ? 10 + bid * 2 : -2 * diff;
+                params.scores[i] += score;
+            }
+            addRow('scoreTable', params.currCard, params.scores);
+        }
+
+        function showWinners(players, scores) {
+            let winners = [];
+            let maxScore = Math.max(...scores);
+            for (let i = 0; i < players.length; i++)
+                if (scores[i] === maxScore)
+                    winners.push(players[i]);
+            setMessage(winners.join(',') + ' won');
+        }
+
+        function notNumber(box) {return box.value.trim() === '' || isNaN(box.value);}
+
+        function setMessage(m) {element('messages').innerHTML = m;}
+
+        function inputs(label, len) {
+            let inputs = new Array(len);
+            for (let i = 0; i < len; i++)
+                inputs[i] = newInput('');
+            addRow('scoreTable', label, inputs);
+            inputs[0].focus();
+            return inputs;
+        }
+
+        function newInput(val) {
+            let input = document.createElement('input');
+            input.setAttribute("type", "text");
+            input.value = val;
+            return input;
+        }
+
+        function addRow(table, first, elements) {
+            let row = element(table).insertRow(-1);
+            row.insertCell(-1).innerText = first;
+            if (elements[0] instanceof HTMLElement)
+                elements.forEach(v => row.insertCell(-1).appendChild(v));
+            else elements.forEach(v => row.insertCell(-1).innerText = v);
+        }
+
+        function addEditRow(first, bidBoxes, trickBoxes) {
+            let row = element('editTable').insertRow(-1);
+            row.insertCell(-1).innerText = first;
+            for (let i = 0; i < bidBoxes.length; i++) {
+                let cell = row.insertCell(-1);
+                cell.appendChild(bidBoxes[i]);
+                cell.appendChild(trickBoxes[i]);
+            }
+        }
+
+        function sumVals(inputs) {
+            let sum = 0;
+            for (let i = 0; i < inputs.length - 1; i++)
+                sum += parseInt(inputs[i].value)
+            return sum;
+        }
+
+        function element(id) {return document.getElementById(id);}
+
+        function toggle(id) {
+            let html = element(id);
+            if (html.style.display === 'none')
+                html.style.display = 'block'
+            else html.style.display = 'none';
+        }
+
+        function validate() {
+            let playersStr = element('players').value.trim().toLowerCase();
+            let dealerStr = element('dealer').value.trim().toLowerCase();
+            if (!playersStr || !dealerStr)
+                return 'Enter players and dealer';
+            if (playersStr.indexOf(dealerStr) === -1)
+                return 'Dealer should be one of the players';
+            let players = playersStr.split(',');
+            for (let i = 0; i < players.length; i++) {
+                players[i] = players[i].trim();
+                if (players[i] === dealerStr)
+                    inputParams.dealerIdx = i;
+            }
+            inputParams.cardLim = parseInt(element('cardLim').value);
+            inputParams.players = players;
+        }
+    }
+</script>
+<style>
+    #scoreTable input, #scoreTable td {
+        width: 40px;
+        margin-left: 5px;
+        text-align: right;
+    }
+
+    #editTable input {
+        width: 30px;
+        margin-left: 5px;
+        text-align: right;
+        float: right;
+    }
+
+    #editTable td {
+        text-align: right;
+    }
+</style>
+<body onload="ohell()">
+<div id="init">
+    <table>
+        <tr>
+            <td>Players</td>
+            <td><input id="players" type="text" placeholder="igor,katie,emery"></td>
+        </tr>
+        <tr>
+            <td>Dealer</td>
+            <td><input id="dealer" type="text" placeholder="katie"></td>
+        </tr>
+        <tr>
+            <td>Card Limit</td>
+            <td><input id="cardLim" type="text" placeholder="13" pattern="\d*"></td>
+        </tr>
+    </table>
+    <button id="startButton">Start Game</button>
+    <button id="testButton">Test Game</button>
+    <p>Enter the names of the players as they are located around the table, e.g. Jim,Katie,Mike</p>
+
+    <p>Enter the name of the dealer, e.g. Mike</p>
+
+    <p>Enter the card limit and click 'Start Game' button</p>
+</div>
+<div id="game" style="display: none">
+    <table>
+        <tr>
+            <td>
+                <table id="scoreTable"></table>
+                <div id="messages" style="float: right"></div>
+                <br/>
+                <a id="toggleEditorLink" href="#">Show/Hide scores editor</a>
+            </td>
+            <td id="editColumn" style="display: none">
+                <table id="editTable"></table>
+                <button id="updateButton" style="float: right">Update</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
