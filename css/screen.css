@@ -57,6 +57,10 @@ table {
     padding: 0;
 }
 
+.links{
+    margin-top: 1em;
+}
+
 li {
     padding: 0 4px;
     color: #000000;
