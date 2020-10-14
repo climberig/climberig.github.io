@@ -57,10 +57,6 @@ table {
     padding: 0;
 }
 
-.links{
-    margin-top: 1em;
-}
-
 li {
     padding: 0 4px;
     color: #000000;
@@ -78,6 +74,11 @@ ul.posts li a {
 }
 
 .blogs {
+    margin-bottom: 1em;
+}
+
+.links{
+    margin-top: 2em;
     margin-bottom: 1em;
 }
 
