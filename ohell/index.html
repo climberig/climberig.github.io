@@ -20,13 +20,13 @@
                 alert('Dealer should be one of the players');
                 return;
             }
-            let players = inputs.players.split(','), dealerIdx = 0;
+            let players = inputs.players.split(',');
             for (let i = 0; i < players.length; i++) {
                 players[i] = players[i].trim();
                 if (players[i] === inputs.dealer)
                     inputParams.dealerIdx = i;
             }
-            startGame({players: players, dealerIdx: dealerIdx, cardLim: parseInt(inputs.cardLim)});
+            startGame({players: players, dealerIdx: inputParams.dealerIdx, cardLim: parseInt(inputs.cardLim)});
         });
         document.getElementById('editScoresLink').addEventListener("click", function () {
             toggle('editColumn');
